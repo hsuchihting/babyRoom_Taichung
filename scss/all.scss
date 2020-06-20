@@ -1,0 +1,105 @@
+@import '_reset';
+@import '_media';
+
+
+//layout
+body {
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+  @include phone {
+    width: 100%;
+  }
+}
+
+.header {
+  background-image: url("https://images.unsplash.com/flagged/photo-1570560558077-45ad028193e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-position: center center;
+  background-size: cover;
+
+  @include phone {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+
+    @include phone {
+      margin-left: 5%;
+    }
+  }
+
+  select {
+    width: 25%;
+    outline: none;
+    padding: 5px;
+    border-radius: 6px;
+
+    @include phone {
+      margin-left: 5%;
+      width: 90%;
+    }
+  }
+
+  .babyRoomTotal {
+    color: #fff;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+    padding: 10px 0;
+
+    @include phone {
+      margin-left: 5%;
+
+    }
+  }
+}
+
+.babyRoomInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 1%;
+  margin-left: 1%;
+
+  .babyRoom {
+    background-color: #f5f5f5;
+    width: 29.33333%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    padding: 3% 1%;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #37474f;
+    line-height: 1.8;
+
+    @include phone {
+      width: 98%;
+      margin-right: 1%;
+      margin-left: 1%;
+      padding: 10px 20px;
+      margin-bottom: 5%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: all 0.5s;
+      background-color: #ffebee;
+    }
+
+    h3 {
+      color: #d84315;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
