@@ -15,6 +15,11 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 20px 0;
+
+  @include pad {
+    width: 100%;
+  }
+
   @include phone {
     width: 100%;
   }
@@ -24,6 +29,10 @@ body {
   background-image: url("https://images.unsplash.com/flagged/photo-1570560558077-45ad028193e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-position: center center;
   background-size: cover;
+
+  @include pad {
+    width: 100%;
+  }
 
   @include phone {
     width: 100%;
@@ -36,20 +45,41 @@ body {
     margin-bottom: 10px;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
 
+    @include pad {
+      margin-left: 2%;
+    }
+
     @include phone {
-      margin-left: 5%;
+      text-align: center;
     }
   }
 
+  p {
+    @include pad {
+      margin-left: 2%;
+    }
+
+    @include phone {
+      text-align: center;
+    }
+
+  }
+
   select {
-    width: 25%;
+    width: 30%;
     outline: none;
     padding: 5px;
     border-radius: 6px;
+    height: 40px;
+
+    @include pad {
+      margin-left: 2%;
+      width: 38%;
+    }
 
     @include phone {
-      margin-left: 5%;
-      width: 90%;
+      margin: 0 auto;
+      width: 70%;
     }
   }
 
@@ -82,10 +112,12 @@ body {
     box-shadow: 0 0 5px #37474f;
     line-height: 1.8;
 
+    @include pad {
+      width: 46%;
+    }
+
     @include phone {
       width: 98%;
-      margin-right: 1%;
-      margin-left: 1%;
       padding: 10px 20px;
       margin-bottom: 5%;
     }
